@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0036)http://fiddle.jshell.net/QDyXP/show/ -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>CSS3 Butterfly Animation - jsFiddle demo</title>
+
+    <script type="text/javascript" src="./mootools-core-1.4.5-nocompat.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./normalize.css">
+
+
+    <link rel="stylesheet" type="text/css" href="./result-light.css">
+
+    <style type="text/css">
+        div#butterfly {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 366px;
+            height: 208px;
+            -webkit-transform: rotate(-20deg) translate(30px, 60px) scale(0.8, 0.8);
+            -webkit-transform-origin: center center;
+            -moz-transform: rotate(-20deg) translate(30px, 60px) scale(0.8, 0.8);
+            -moz-transform-origin: center center;
+        }
+
+        div#rightwing {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 178px;
+            height: 208px;
+            background-image: url(./img/wing.png);
+            background-repeat: no-repeat;
+            -webkit-transform: rotate3d(0, 0, 0, 180deg); /* Mirror left wing */
+            -webkit-transform-origin: center right;
+            -webkit-animation-name: rightwingani;
+            -webkit-animation-duration: 8s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-timing-function: ease-in-out;
+            -moz-transform: rotate3d(0, 0, 0, 180deg); /* Mirror left wing */
+            -moz-transform-origin: center right;
+            -moz-animation-name: rightwingani;
+            -moz-animation-duration: 2s;
+            -moz-animation-iteration-count: infinite;
+            -moz-animation-timing-function: ease-in-out;
+        }
+
+        @-webkit-keyframes rightwingani {
+            from {
+                -webkit-transform: rotate3d(0, 1, 0, 180deg);
+            }
+
+            30% {
+                -webkit-transform: rotate3d(0, 1, 0, 180deg);
+            }
+
+            50% {
+                -webkit-transform: rotate3d(0, 1, 0, 100deg);
+            }
+
+            70% {
+                -webkit-transform: rotate3d(0, 1, 0, 180deg);
+            }
+
+            to {
+                -webkit-transform: rotate3d(0, 1, 0, 180deg);
+            }
+        }
+
+        @-moz-keyframes rightwingani {
+            from {
+                -moz-transform: rotate3d(0, 1, 0, 180deg);
+            }
+
+            30% {
+                -moz-transform: rotate3d(0, 1, 0, 180deg);
+            }
+
+            50% {
+                -moz-transform: rotate3d(0, 1, 0, 100deg);
+            }
+
+            70% {
+                -moz-transform: rotate3d(0, 1, 0, 180deg);
+            }
+
+            to {
+                -moz-transform: rotate3d(0, 1, 0, 180deg);
+            }
+        }
+
+        div#leftwing {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 178px;
+            height: 208px;
+            background-image: url(./img/wing.png);
+            background-repeat: no-repeat;
+            -webkit-transform-origin: top right;
+            -webkit-animation-name: leftwingani;
+            -webkit-animation-duration: 8s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-timing-function: ease-in-out;
+            -moz-transform-origin: top right;
+            -moz-animation-name: leftwingani;
+            -moz-animation-duration: 2s;
+            -moz-animation-iteration-count: infinite;
+            -moz-animation-timing-function: ease-in-out;
+        }
+
+        @-webkit-keyframes leftwingani {
+            from {
+                -webkit-transform: rotate3d(0, 1, 0, 0deg);
+            }
+
+            30% {
+                -webkit-transform: rotate3d(0, 1, 0, 0deg);
+            }
+
+            50% {
+                -webkit-transform: rotate3d(0, 1, 0, 80deg);
+            }
+
+            70% {
+                -webkit-transform: rotate3d(0, 1, 0, 00deg);
+            }
+
+            to {
+                -webkit-transform: rotate3d(0, 1, 0, 00deg);
+            }
+        }
+
+
+        @-moz-keyframes leftwingani {
+            from {
+                -moz-transform: rotate3d(0, 1, 0, 0deg);
+            }
+
+            30% {
+                -moz-transform: rotate3d(0, 1, 0, 0deg);
+            }
+
+            50% {
+                -moz-transform: rotate3d(0, 1, 0, 80deg);
+            }
+
+            70% {
+                -moz-transform: rotate3d(0, 1, 0, 00deg);
+            }
+
+            to {
+                -moz-transform: rotate3d(0, 1, 0, 00deg);
+            }
+        }
+    </style>
+
+
+    <!--<script type="text/javascript">//<![CDATA[
+window.addEvent('load', function() {
+
+
+});//]]>
+
+    </script>-->
+
+</head>
+<body>
+    <div id="container">
+        <div id="butterfly" style="z-index:1; top:0px; left:0px; width:100%; height:100%; DISPLAY: inline-table">
+            <div id="leftwing">
+            </div>
+            <div id="rightwing">
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+</html>
