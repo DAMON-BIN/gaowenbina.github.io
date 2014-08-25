@@ -1,37 +1,58 @@
-#butterfly {
+#page_03_butterfly_00 {
     position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 366px;
-    height: 208px;
-    -webkit-transform: rotate(-20deg) translate(30px, 60px) scale(0.8, 0.8);
-    -webkit-transform-origin: center center;
-    -moz-transform: rotate(-20deg) translate(30px, 60px) scale(0.8, 0.8);
-    -moz-transform-origin: center center;
+    left: 17.7%;
+    top: 10.6%;
+    width: 29.0%;
+    height: 13.6%;
+    z-index:14; 
+        opacity: 0;
+    /*background-color: #00ff00;*/
+    -webkit-transform: rotate(50deg) translate(0px, 0px) scale(1.0, 1.0);
+    -webkit-transform-origin: top left;
+    -moz-transform: rotate(50deg) translate(0px, 0px) scale(1.0, 1.0);
+    -moz-transform-origin: top left;
 }
 
-#rightwing {
+
+#page_03_butterfly_00.animate {
+    -webkit-animation-name: page_03_butterfly_00_ani;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+}
+@-webkit-keyframes page_03_butterfly_00_ani {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+#page_03_rightwing_00 {
     position: absolute;
     left: 0px;
     top: 0px;
-    width: 178px;
-    height: 208px;
-    background-image: url(../img/wing.png);
+    width: 50%;
+    height: 100%;
+    background-image: url(../img/wing_08.png);
     background-repeat: no-repeat;
-    -webkit-transform: rotate3d(0, 0, 0, 180deg); /* Mirror left wing */
+    background-size: 100% 100%;
+    -webkit-transform: rotate3d(0, 1, 0, 180deg); /* Mirror left wing */
     -webkit-transform-origin: center right;
+    -moz-transform: rotate3d(0, 0, 1, 180deg); /* Mirror left wing */
+    -moz-transform-origin: center right;
+}
+#page_03_rightwing_00.animate {
     -webkit-animation-name: rightwingani;
-    -webkit-animation-duration: 8s;
+    -webkit-animation-duration: 5s;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: ease-in-out;
-    -moz-transform: rotate3d(0, 0, 0, 180deg); /* Mirror left wing */
-    -moz-transform-origin: center right;
     -moz-animation-name: rightwingani;
-    -moz-animation-duration: 2s;
+    -moz-animation-duration: 5s;
     -moz-animation-iteration-count: infinite;
     -moz-animation-timing-function: ease-in-out;
 }
-
 @-webkit-keyframes rightwingani {
     from {
         -webkit-transform: rotate3d(0, 1, 0, 180deg);
@@ -76,26 +97,30 @@
     }
 }
 
-#leftwing {
+#page_03_leftwing_00 {
     position: absolute;
     left: 0px;
     top: 0px;
-    width: 178px;
-    height: 208px;
-    background-image: url(../img/wing.png);
+    width: 50%;
+    height: 100%;
+    background-image: url(../img/wing_08.png);
     background-repeat: no-repeat;
+    background-size: 100% 100%;
+    -webkit-transform: rotate(0deg) translate(0px, 0px) scale(1.0, 1.0);
     -webkit-transform-origin: top right;
+    -moz-transform: rotate(0deg) translate(0px, 0px) scale(1.0, 1.0);
+    -moz-transform-origin: top right;
+}
+#page_03_leftwing_00.animate {
     -webkit-animation-name: leftwingani;
-    -webkit-animation-duration: 8s;
+    -webkit-animation-duration: 5s;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: ease-in-out;
-    -moz-transform-origin: top right;
     -moz-animation-name: leftwingani;
-    -moz-animation-duration: 2s;
+    -moz-animation-duration: 5s;
     -moz-animation-iteration-count: infinite;
     -moz-animation-timing-function: ease-in-out;
 }
-
 @-webkit-keyframes leftwingani {
     from {
         -webkit-transform: rotate3d(0, 1, 0, 0deg);

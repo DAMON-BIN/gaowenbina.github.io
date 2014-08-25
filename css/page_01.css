@@ -49,13 +49,13 @@
 }
 #page_01.animate {
     -webkit-animation-name: page_01_bng_text_ani;
-    -webkit-animation-duration: 0.5s;
+    -webkit-animation-duration: 1s;
     -webkit-animation-iteration-count: 1;
     -webkit-animation-timing-function: ease-in-out;
     -webkit-animation-fill-mode: forwards;
     -webkit-animation-delay: 0s;
     -moz-animation-name: page_01_bng_text_ani;
-    -moz-animation-duration: 0.1s;
+    -moz-animation-duration: 1s;
     -moz-animation-iteration-count: 1;
     -moz-animation-timing-function: ease-in-out;
     -moz-animation-fill-mode: forwards;
@@ -67,6 +67,8 @@
     height:120%;
 }
 to {
+    left:0%; 
+    top:0%; 
     width:100%; 
     height:100%;
 }
@@ -74,13 +76,13 @@ to {
 
 #page_01_txt_00.animate {
     -webkit-animation-name: page_00_text_ani;
-    -webkit-animation-duration: 0.5s;
+    -webkit-animation-duration: 1s;
     -webkit-animation-iteration-count: 1;
     -webkit-animation-timing-function: ease-in-out;
     -webkit-animation-fill-mode: forwards;
     -webkit-animation-delay: 0s;
     -moz-animation-name: page_00_text_ani;
-    -moz-animation-duration: 0.1s;
+    -moz-animation-duration: 1s;
     -moz-animation-iteration-count: 1;
     -moz-animation-timing-function: ease-in-out;
     -moz-animation-fill-mode: forwards;
@@ -99,13 +101,13 @@ to {
 
 #page_01_txt_01.animate {
     -webkit-animation-name: page_01_text_ani;
-    -webkit-animation-duration: 0.5s;
+    -webkit-animation-duration: 1s;
     -webkit-animation-iteration-count: 1;
     -webkit-animation-timing-function: ease-in-out;
     -webkit-animation-fill-mode: forwards;
     -webkit-animation-delay: 0.5s;
     -moz-animation-name: page_01_text_ani;
-    -moz-animation-duration: 0.1s;
+    -moz-animation-duration: 1s;
     -moz-animation-iteration-count: 1;
     -moz-animation-timing-function: ease-in-out;
     -moz-animation-fill-mode: forwards;
@@ -124,13 +126,13 @@ to {
 
 #page_01_txt_02.animate {
     -webkit-animation-name: page_02_text_ani;
-    -webkit-animation-duration: 0.5s;
+    -webkit-animation-duration: 1s;
     -webkit-animation-iteration-count: 1;
     -webkit-animation-timing-function: ease-in-out;
     -webkit-animation-fill-mode: forwards;
     -webkit-animation-delay: 1s;
     -moz-animation-name: page_02_text_ani;
-    -moz-animation-duration: 0.1s;
+    -moz-animation-duration: 1s;
     -moz-animation-iteration-count: 1;
     -moz-animation-timing-function: ease-in-out;
     -moz-animation-fill-mode: forwards;
