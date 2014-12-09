@@ -1,155 +1,89 @@
 ﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>A New Day Has Come</title>
+<title>Happy New Year</title>
+<style type="text/css">
+body {
+  font-family: 'Lobster', serif;
+  font-size: 1px;
+  color: #00000009;
+  /*color: #FFFFFF;*/
+  -moz-user-select: -moz-none;
+}
+</style>
+  <script type="text/javascript" src="./js/1.8.2/jquery.min.js"></script>
+<script type="text/javascript">
+//weixin
 
-  <script type="text/javascript">
-    //weixin
+var imgUrl = "http://damon-gao.github.io/img/logo.png";
+var lineLink = "http://damon-gao.github.io";
+var descContent = "Happy New Year!";
+var shareTitle = "Happy New Year!";
+var appid = '';
 
-    var imgUrl = "http://damon-gao.github.io/img/logo.png";
-    var lineLink = "http://damon-gao.github.io";
-    var descContent = " ";
-    var shareTitle = " ";
-    var appid = '';
-
-    function shareFriend() {
-      WeixinJSBridge.invoke('sendAppMessage', {
-        "appid": appid,
-        "img_url": imgUrl,
-        "img_width": "100",
-        "img_height": "100",
-        "link": lineLink,
-        "desc": descContent,
-        "title": shareTitle
+function shareFriend() {
+  WeixinJSBridge.invoke('sendAppMessage', {
+      "appid": appid,
+      "img_url": imgUrl,
+      "img_width": "100",
+      "img_height": "100",
+      "link": lineLink,
+      "desc": descContent,
+      "title": shareTitle
       }, function (res) {
-        _report('send_msg', res.err_msg);
+      _report('send_msg', res.err_msg);
       })
-    }
-    function shareTimeline() {
-      WeixinJSBridge.invoke('shareTimeline', {
-        "img_url": imgUrl,
-        "img_width": "100",
-        "img_height": "100",
-        "link": lineLink,
-        "desc": descContent,
-        "title": shareTitle
+}
+function shareTimeline() {
+  WeixinJSBridge.invoke('shareTimeline', {
+      "img_url": imgUrl,
+      "img_width": "100",
+      "img_height": "100",
+      "link": lineLink,
+      "desc": descContent,
+      "title": shareTitle
       }, function (res) {
-        _report('timeline', res.err_msg);
+      _report('timeline', res.err_msg);
       });
-    }
-    function shareWeibo() {
-      WeixinJSBridge.invoke('shareWeibo', {
-        "content": descContent,
-        "url": lineLink,
+}
+function shareWeibo() {
+  WeixinJSBridge.invoke('shareWeibo', {
+      "content": descContent,
+      "url": lineLink,
       }, function (res) {
-        _report('weibo', res.err_msg);
+      _report('weibo', res.err_msg);
       });
-    }
-    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+}
+document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
 
-      WeixinJSBridge.on('menu:share:appmessage', function (argv) {
-        shareFriend();
-      });
-
-      WeixinJSBridge.on('menu:share:timeline', function (argv) {
-        shareTimeline();
+    WeixinJSBridge.on('menu:share:appmessage', function (argv) {
+      shareFriend();
       });
 
-      WeixinJSBridge.on('menu:share:weibo', function (argv) {
-        shareWeibo();
+    WeixinJSBridge.on('menu:share:timeline', function (argv) {
+      shareTimeline();
+      });
+
+    WeixinJSBridge.on('menu:share:weibo', function (argv) {
+      shareWeibo();
       });
     }, false);
 
-
-  </script>
-
-
-
-  <!--<script type="text/javascript" src="./js/mootools-core-1.4.5-nocompat.js"></script>-->
-  <!--<script type="text/javascript" src="./js/parabola-min.js"></script>-->
-  <!--<link rel="stylesheet" type="text/css" href="./js/fullPage/jquery.fullPage.css" />-->
-
-  <link rel="stylesheet" href="http://www.dowebok.com/demo/2014/77/css/jquery.fullPage.css" />
-
-  <script src="http://cdn.staticfile.org/jquery/1.8.3/jquery.min.js"></script>
-  <script src="http://cdn.staticfile.org/jqueryui/1.10.3/jquery-ui.min.js"></script>
-  <script src="http://www.dowebok.com/demo/2014/77/js/jquery.fullPage.min.js"></script>
-  <!--<script src="./js/gifffer.min.js"></script>-->
-
-  <link rel="stylesheet" type="text/css" href="css/share.css" />
-  <!--<script type="text/javascript" src="./js/1.8.2/jquery.min.js"></script>
-   <script type="text/javascript" src="./js/func.min.js"></script>
-   <script type="text/javascript" src="js/fullPage/jquery.fullPage.js"></script>-->
-  <script>
-    $(document).ready(function () {
-      $.fn.fullpage({
-        slidesColor: ['#fff', '#fff', '#fff', '#fff', '#fff'],
-        anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
-        menu: '#menu'
-      });
-
+</script> 
+<script>
+$(document).ready(function () {
+   // document.getElementById("video1").play();
     });
-  </script>
+</script>
 
 </head>
 <body>
-<<<<<<< HEAD
-  <div style="z-index:0; position:absolute; top:0px; left:0px; width:100%; height:100%; overflow:hidden;">
-    <img src="./img/bng.jpg" style="z-index:0; position:absolute; top:0px; left:0px; width:100%; height:100%;" /> </img >
-    <div id="s_00" style="z-index:0; position:absolute; top:0px; left:0px; width:100%; height:100%; ">
-     <embed src="video.mp4" height=100% >
-    </div>
-    <img id="arrow" src="./img/arrow.png"/>
-  </div>
-  </div>
-  <div class="container" style="z-index:1; position:absolute; top:0px; left:0px; width:100%; height:100%;DISPLAY: inline-table">
-    <!--<pre class="prettyprint lang-js" data-src="code_1"> </pre>-->
-    <div id="test" class="box" style="z-index:1; top:0px; left:0px; width:100%; height:100%; "></div>
-    <script type="text/javascript" src="./js/page_information.js"></script>
-  </div>
-  <div id="load_div" style="z-index: 1; position: absolute; top: 0%; left: 0%; width: 100%; height: 100%; background: #000; visibility: hidden;">
-    <div style="text-align: center; ">
-      <div class=" loading" id="loading"></div>
-      <span style="color:#FFFFFF;">页面加载中，请稍候……</span>
-=======
-  <div>
-    <div class="section">
-      <img src="./img/bng_kv.jpg" style="z-index:0; position:absolute; top:0px; left:0px; width:100%; height:100%;" />
-
-      <div class="down-icon spring" style="z-index: 0; position: absolute; top: 90%; left: 0%; width: 100%; height: 100%;">
-        <img src="img/arrow_down.png" style="height: 32px;" />
-      </div>
-    </div>
-    <div class="section">
-      <img src="./img/1.gif" style="z-index:0; position:absolute; top:0px; left:0px; width:100%; height:100%;" />
-      <!--<img data-gifffer="./img/1.gif" style="z-index:0; position:absolute; top:0px; left:0px; width:100%; height:100%;" />-->
-      <div class="down-icon spring" style="z-index: 0; position: absolute; top: 0%; left: 0%; width: 100%; height: 100%;">
-        <img src="img/arrow.png" style="height: 52px;" />
-      </div>
-      <div class="down-icon spring" style="z-index: 0; position: absolute; top: 90%; left: 0%; width: 100%; height: 100%;">
-        <img src="img/arrow_down.png" style="height: 32px;" />
-      </div>
-    </div>
-    <div class="section">
-      <img src="./img/bng_enter.jpg" style="z-index:0; position:absolute; top:0px; left:0px; width:100%; height:100%;" />
-      <img src="img/thumb.png" style="z-index: 0; position: absolute; top: 70%; left: 25%; width: 50%; height:20%;" />
-      <div class="down-icon spring" style="z-index: 0; position: absolute; top: 0%; left: 0%; width: 100%; height: 100%;">
-        <img src="img/arrow.png" style="height: 52px;" />
-      </div>
-      <div class="down-icon spring" style="z-index: 0; position: absolute; top: 90%; left: 0%; width: 100%; height: 100%;">
-        <img src="img/arrow_down.png" style="height: 32px;" />
-      </div>
-    </div>
-    <div class="section">
-      <img src="./img/bng.jpg" style="z-index:0; position:absolute; top:0px; left:0px; width:100%; height:100%;" />
-      <img src="./img/test.png" style="z-index:0; position:absolute; top:25%; left:25%; width:50%; height:50%;" />
-      <h4 style="color: #4D4D4D; position: absolute; font-size:50px; top: 10%; left: 25%; width: 100%; height: 100%; text-shadow: 1px 1px 0 rgba(255,255,255,0.5); ">长按二维码保存到手机</h4>
-      <div class="down-icon spring" style="z-index: 0; position: absolute; top: 0%; left: 0%; width: 100%; height: 100%;">
-        <img src="img/arrow.png" style="height: 52px;" />
-      </div>
->>>>>>> e48db0e4f8f58298ba928f7c62e88c95c2df2dc9
-    </div>
-
-  </div>
+<div style="z-index:0; position:absolute; top:0px; left:0px; width:100%; height:100%; overflow:hidden;">
+  <video id="video1" height="100%" width="100%" controls poster="./img/bng.png">
+    <source src="video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <!--<embed id="video1" src="video.mp4" height=100% width=100% border=0 autostart=false play=true enablejavascript="true" />-->
+</div>
 </body>
 </html>
